@@ -6,5 +6,4 @@ baf.tex
 9eieat7q1vc.tex
 3ihorbe0t3c.tex
 c2edbfba408.html
-13dcb.tex
 699.html
