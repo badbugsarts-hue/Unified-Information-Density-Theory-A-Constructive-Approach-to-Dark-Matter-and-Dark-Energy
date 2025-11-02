@@ -7,6 +7,4 @@ baf.tex
 3ihorbe0t3c.tex
 c2edbfba408.html
 13dcb.tex
-b896.html
-b275.tex
 699.html
