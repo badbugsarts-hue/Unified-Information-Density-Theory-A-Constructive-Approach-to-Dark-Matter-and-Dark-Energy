@@ -1,7 +1,5 @@
 funhuaofmmo.html
 0cvjtdo0r6.tex
-2sh9nha3tk4.html
-lbh8j9t69j8.tex
 13191.tex
 baf.tex
 11a8b.html
