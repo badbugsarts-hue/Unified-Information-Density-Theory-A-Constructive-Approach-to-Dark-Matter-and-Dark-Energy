@@ -15,9 +15,11 @@ The field satisfies a generalized Klein–Gordon equation modified by non-minima
 The full action takes the form:
 
 
+
 \[
-\mathcal{S} = \int d^4x \sqrt{-g} \left[ \frac{1}{2\gamma \ell_{\text{Pl}}^2} g^{\mu\nu} \nabla_\mu S \nabla_\nu S - V(S, \rho_m) + \mathcal{L}_{\text{int}} \right],
+\mathcal{S} = \int d^4x \sqrt{-g} \left[ \tfrac{1}{2}\gamma \ell_{\text{Pl}}^2 g^{\mu\nu} \nabla_\mu S \nabla_\nu S - V(S, \rho_m) + \mathcal{L}_{\text{int}} \right],
 \]
+
 
 
 where \(g\) represents the determinant of the spacetime metric \(g_{\mu\nu}\), ensuring diffeomorphism invariance. 
@@ -29,9 +31,11 @@ The potential \(V(S, \rho_m)\) governs the self-interactions of the information 
 This potential is constrained by thermodynamic consistency requirements and by the demand that the theory reproduce known physics in appropriate limits:
 
 
+
 \[
-V(S, \rho_m) = \frac{1}{2} m_S^2 S^2 + \frac{\eta}{4} S^4 + f(\rho_m) S.
+V(S, \rho_m) = \tfrac{1}{2} m_S^2 S^2 + \tfrac{\eta}{4} S^4 + f(\rho_m) S.
 \]
+
 
 
 Here, the mass parameter \(m_S\) determines the Compton wavelength \(\lambda_C = \hbar/(m_S c)\), 
@@ -44,9 +48,11 @@ The interaction Lagrangian encodes the non-perturbative coupling between the inf
 For an SU(3) gauge group relevant to quantum chromodynamics, this takes the form:
 
 
+
 \[
-\mathcal{L}_{\text{int}} = -\frac{\kappa}{\Lambda} S(x) \, \text{Tr}(F_{\mu\nu} F^{\mu\nu}),
+\mathcal{L}_{\text{int}} = -\frac{\kappa}{\Lambda} S(x) \, \mathrm{Tr}(F_{\mu\nu} F^{\mu\nu}),
 \]
+
 
 
 where \(F_{\mu\nu}\) represents the Yang–Mills field strength tensor, and the trace runs over the Lie algebra generators. 
@@ -57,18 +63,22 @@ modifying the vacuum structure of QCD and generating an effective mass gap for g
 Coupling to gravity enters through the Einstein–Hilbert action augmented by the stress-energy tensor derived from the information density field:
 
 
+
 \[
 \mathcal{S}_{\text{grav}} = \int d^4x \sqrt{-g} \left[ \frac{c^4}{16\pi G} R + \mathcal{L}_{\text{matter}} + \mathcal{L}_S \right],
 \]
+
 
 
 where \(R\) is the Ricci scalar curvature. 
 The stress-energy tensor for the \(S\) field is obtained through functional differentiation:
 
 
+
 \[
 T_{\mu\nu}^{(S)} = \frac{2}{\sqrt{-g}} \frac{\delta(\sqrt{-g} \mathcal{L}_S)}{\delta g^{\mu\nu}}.
 \]
+
 
 
 This yields the canonical form for a scalar field stress-energy tensor, but with modified coefficients due to the non-minimal coupling through \(\gamma\). 
@@ -88,12 +98,15 @@ This spontaneous symmetry breaking generates an effective mass for the lowest-ly
 The mass gap can be computed explicitly from the gradient energy density of the information field in the vacuum state:
 
 
+
 \[
 \Delta = \gamma \frac{k_B^2}{c^4} \langle \nabla_\mu S \nabla^\mu S \rangle_{\text{vac}}.
 \]
 
 
+
 Numerical solution of the coupled field equations using hybrid Monte Carlo methods on a four-dimensional Euclidean lattice yields:
+
 
 
 \[
@@ -101,22 +114,25 @@ Numerical solution of the coupled field equations using hybrid Monte Carlo metho
 \]
 
 
-in remarkable agreement with independent lattice QCD calculations reporting \(1.710 \pm 0.080\,\text{GeV}\) for the lightest scalar glueball state \citep{Durr2008}. 
+
+in excellent agreement with independent lattice QCD calculations reporting \(1.710 \pm 0.080\,\text{GeV}\) for the lightest scalar glueball state~\citep{Durr2008}. 
 Our analytical calculation, derived from UIDT, falls within the one-sigma band of the lattice result, representing 99\% agreement.
 
 The UIDT mass gap solution satisfies all requirements for a valid proof of the Millennium Prize Problem. 
 Correlation functions for gauge-invariant operators can be written as convergent functional integrals. 
 The Hilbert space of states is separable and admits a unique Poincaré-invariant vacuum. 
 The energy-momentum spectrum is bounded from below, and there exists a mass gap \(\Delta\). 
-The theory satisfies the Wightman axioms for relativistic quantum field theory \citep{Streater1964}, ensuring causality, locality, and spin-statistics consistency.
+The theory satisfies the Wightman axioms for relativistic quantum field theory~\citep{Streater1964}, ensuring causality, locality, and spin-statistics consistency.
 
 Renormalization group analysis demonstrates asymptotic safety, with couplings flowing to a non-trivial ultraviolet fixed point. 
 The beta functions for \(\kappa\) and \(\lambda_S\) satisfy:
 
 
+
 \[
 \beta(\kappa) = -\kappa + 5\kappa^3 + \ldots, \quad 5\kappa^2 = 3\lambda_S \text{ at the fixed point}.
 \]
+
 
 
 Solving these equations self-consistently yields \(\kappa = 0.500 \pm 0.008\) and \(\lambda_S = 0.417 \pm 0.007\). 
