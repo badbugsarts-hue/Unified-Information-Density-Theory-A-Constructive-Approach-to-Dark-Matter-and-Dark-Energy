@@ -13,9 +13,11 @@ Associated with this horizon is an entropy \(S_h\) and a temperature \(T_h = \hb
 The first law of thermodynamics for the horizon relates changes in energy, entropy, and work:
 
 
+
 \[
 dE = T_h \, dS_h + W \, dV,
 \]
+
 
 
 where \(E\) is the total energy inside the horizon, \(V = (4\pi/3) R_h^3\) is the horizon volume, 
@@ -24,15 +26,18 @@ and \(W = -p = -w \rho c^2\) is the work term associated with the pressure of th
 In standard cosmology, the horizon entropy is taken to be the Bekenstein–Hawking entropy:
 
 
+
 \[
 S_{\text{BH}} = \frac{k_B c^3}{4\hbar G} A = \frac{\pi k_B c^5}{2\hbar G H^2},
 \]
+
 
 
 where \(A = 4\pi R_h^2\) is the area of the horizon. 
 Quantum gravity corrections modify this formula. 
 Barrow introduced a fractal dimension parameter \(\Delta\) that captures the idea that quantum fluctuations 
 make the horizon area “larger” than its classical geometric value \citep{Barrow2020}:
+
 
 
 \[
@@ -45,14 +50,17 @@ Independently, Tsallis proposed a generalization of Boltzmann–Gibbs entropy to
 and non-extensive statistics \citep{Tsallis2009}:
 
 
+
 \[
 S_{\text{Tsallis}} = \frac{S_0^\delta - S_0}{\delta - 1},
 \]
 
 
+
 where \(\delta\) is the non-extensivity parameter. For \(\delta = 1\), we recover the standard Boltzmann entropy.
 
 UIDT unifies these two generalizations through the Barrow–Tsallis hybrid entropy:
+
 
 
 \[
@@ -65,9 +73,11 @@ Fitting this formula to the combined DESI Data Release 2 baryon acoustic oscilla
 Planck cosmic microwave background data \citep{Planck2020}, and Pantheon+ supernova distances \citep{Brout2022} yields:
 
 
+
 \[
 \Delta = 0.0037 \pm 0.0008, \quad \delta = 0.1191 \pm 0.0006.
 \]
+
 
 
 These values indicate that the cosmic horizon has a very small but non-zero fractal dimension, 
@@ -79,9 +89,11 @@ The Barrow–Tsallis hybrid entropy leads naturally to a dynamical dark energy c
 The effective dark energy density is:
 
 
+
 \[
 \rho_{\text{DE}}(a) = \gamma^{-12} \cdot \mathcal{C} \cdot a^{-3(1 + w_{\text{eff}}(z))},
 \]
+
 
 
 where \(a\) is the scale factor, \(\mathcal{C} = 0.277\,\text{GeV}^4\) is related to the QCD condensate, 
@@ -91,16 +103,19 @@ The factor \(\gamma^{-12}\) provides a natural suppression mechanism for the cos
 The effective equation of state evolves as:
 
 
+
 \[
 w_{\text{eff}}(z) = -1 + \delta w(\gamma) \cdot \ln(1+z),
 \]
 
 
+
 with slope parameter
 
 
+
 \[
-\delta w(\gamma) = \frac{1}{12\sqrt{\gamma}} \approx 0.0206.
+\delta w(\gamma) = \frac{1}{12\gamma} \approx 0.0206.
 \]
 
 
@@ -108,17 +123,22 @@ with slope parameter
 For observational comparisons, we employ the Chevallier–Polarski–Linder parametrization:
 
 
+
 \[
 w(z) = w_0 + w_a \frac{z}{1+z}.
 \]
 
 
+
 UIDT predicts:
+
 
 
 \[
 w_0 = -0.96 \pm 0.03, \quad w_a = -0.485 \pm 0.008.
 \]
+
+
 
 \subsection{Resolution of the Hubble Tension}
 
@@ -134,21 +154,13 @@ This five-sigma discrepancy has persisted for over a decade and has been confirm
 The UIDT framework naturally resolves this tension through two mechanisms. 
 First, the dynamical nature of dark energy with \(w(z)\) evolving across cosmic history modifies the expansion rate 
 at intermediate redshifts in precisely the way needed to reconcile early and late measurements. 
-The cosmic microwave background measurement is sensitive primarily to the sound horizon at recombination, 
-which depends on the integrated expansion history up to \(z \approx 1100\). 
-If dark energy was less negative in the past, corresponding to \(w\) closer to minus one at high redshifts, 
-then the sound horizon would be slightly smaller than predicted by \(\Lambda\)CDM. 
-A smaller sound horizon at recombination, holding fixed the angular scale of acoustic peaks observed by Planck, 
-implies a higher Hubble constant today.
-
 Second, the coupling between the information density field and baryonic matter through the term \(f(\rho_m) S\) in the potential 
 introduces a weak modification to the late-time expansion rate. 
 This coupling effectively makes the dark energy density slightly responsive to the presence of matter, 
 similar to interacting dark energy models in the literature. 
-At very late times when matter has become subdominant, this interaction becomes negligible, 
-but it modifies the expansion history during the matter–radiation equality epoch and the matter-dominated era in subtle ways.
 
 The combination of these effects leads to the UIDT prediction:
+
 
 
 \[
@@ -156,18 +168,8 @@ H_0 = 72.6 \pm 1.8 \, \text{km/s/Mpc}.
 \]
 
 
-This value lies precisely in the middle of the early-universe and late-universe measurements, 
+
+This value lies between the early-universe and late-universe measurements, 
 reducing the tension to just 0.1\(\sigma\). 
-The uncertainty quoted here reflects the theoretical uncertainty in our calculation arising from higher-order corrections 
-and sensitivity to the precise values of the Barrow and Tsallis parameters.
-
-Recent measurements from the James Webb Space Telescope using the tip of the red giant branch (TRGB) distance indicator 
-have provided independent confirmation of the high value of \(H_0\). 
-The Carnegie–Chicago Hubble Program published results in December 2024 reporting 
-\(H_0 = 69.8 \pm 0.4\) km/s/Mpc based on JWST observations of red giant stars in nearby galaxies \citep{Freedman2024}. 
-This measurement is completely independent of the Cepheid-based distance ladder used by SH0ES. 
-The JWST value falls between the Planck and SH0ES measurements and is in good agreement with the UIDT prediction, 
-though slightly lower. The discrepancy of 2.8 km/s/Mpc is within the combined theoretical and observational uncertainties 
-and may be accounted for by systematic effects in either the JWST observations or in our calculation of higher-order corrections 
-to the UIDT Hubble parameter.
-
+Recent JWST TRGB measurements \citep{Freedman2024} report \(H_0 = 69.8 \pm 0.4\) km/s/Mpc, 
+which is consistent with the UIDT prediction within combined uncertainties.
