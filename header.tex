@@ -1,8 +1,39 @@
+% --- Minimal macros for LaTeXML compatibility ---
+\newcommand{\arcsec}{''}
+\newcommand{\arcmin}{'}
+\newcommand{\url}[1]{\texttt{#1}}
 
-\usepackage{cleveref}
+% --- UIDT Core Constants ---
+\newcommand{\gammaUIDT}{$\gamma_{\mathrm{UIDT}} \approx 16.339$}
+\newcommand{\MassGap}{$\Delta_{\mathrm{UIDT}} \approx 1.710~\mathrm{GeV}$}
+\newcommand{\VacInfo}{$\rho_{\text{info}}^{\text{vac}}$}
 
-% Korrekte Definitionen:
-\crefname{section}{Section}{Sections}
-\crefname{equation}{Eq.}{Eqs.}
-\crefname{figure}{Fig.}{Figs.}
-\crefname{table}{Table}{Tables}
+% --- Cosmological Parameters ---
+\newcommand{\HubbleTension}{$H_0 \approx 73.0~\mathrm{km\,s^{-1}\,Mpc^{-1}}$}
+\newcommand{\wDynamic}{$w(z) \neq -1$}
+\newcommand{\SEight}{$S_8 = 0.756 \pm 0.002$}
+
+% --- Instruments & Methods ---
+\newcommand{\DESI}{DESI DR2}
+\newcommand{\Euclid}{Euclid}
+\newcommand{\JWST}{JWST}
+\newcommand{\ACT}{ACT DR6}
+\newcommand{\PINN}{PINN}
+
+% --- Mathematical Shortcuts ---
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\ddt}{\mathrm{d}/\mathrm{d}t}
+
+% --- Journal Metadata ---
+\received{December 08, 2025}
+\revised{December 14, 2025}
+\accepted{\today}
+\submitjournal{The Astrophysical Journal}
+
+\shorttitle{UIDT v3.6: Vacuum Information Density}
+\shortauthors{Rietz et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% END PREAMBLE - CONTENT STARTS BELOW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
