@@ -1,178 +1,42 @@
 \section{Dark Matter as Information-Bound States}
+\label{sec:darkmatter}
 
-\subsection{Thermodynamic Clumping and the \(S_8\) Parameter}
+\subsection{Thermodynamic Clumping and the $S_8$ Parameter}
+\label{subsec:s8_tension}
 
-In addition to dark energy, the UIDT framework provides a novel interpretation of dark matter. 
-Rather than postulating the existence of new weakly-interacting particles, UIDT attributes dark matter phenomena 
-to thermodynamic properties of the information density field on galactic and sub-galactic scales. 
-The key concept is that gradients in the information density field produce an effective gravitational potential 
-that supplements the gravity from baryonic matter.
+The UIDT framework provides a fundamentally different interpretation of dark matter phenomena. Rather than postulating new weakly-interacting particles, UIDT attributes dark matter effects to thermodynamic properties of the information density field on galactic and sub-galactic scales. The key insight is that gradients in the information density field $\nabla S$ produce an effective gravitational potential that supplements the gravity from baryonic matter, without requiring additional particle species.
 
-The matter power spectrum, which quantifies the amplitude of density fluctuations as a function of spatial scale, 
-is modified in UIDT through a “clumping parameter” \(\xi\) that enters the equation for the information density:
+The matter power spectrum, quantifying the amplitude of density fluctuations as a function of spatial scale, is modified in UIDT through a ``clumping parameter'' $\xi$ entering the equation for information density:
+\begin{multline}
+\label{eq:info_density}
+\rho_I(a,\mathbf{x}) = \frac{k_B T_{\mathrm{CMB}}(a)}{\lambda_{\mathrm{UIDT}}^3 \ln 2} 
+\left(1 + \xi \frac{\rho_m(\mathbf{x})}{\rho_{c0}}\right) \\
+\times \left(\frac{L_{\mathrm{IR}}(a)}{\lambda_{\mathrm{UIDT}}}\right)^{(2+\Delta)\delta} 
+\exp\left(-\alpha |\nabla S_{\mathrm{B-T}}|^2\right) \cdot S_{\mathrm{scalar}}(a),
+\end{multline}
+where $T_{\mathrm{CMB}}(a) = T_0(1+z)$ represents the cosmic microwave background temperature evolution, $\lambda_{\mathrm{UIDT}} = 0.66~\mathrm{nm}$ is the fundamental information scale, $\rho_m(\mathbf{x})$ denotes local matter density, $\rho_{c0} = 3H_0^2/(8\pi G)$ is the critical density today, $L_{\mathrm{IR}}(a)$ represents the infrared cutoff scale (approximately the Hubble radius), and $S_{\mathrm{scalar}}(a)$ encodes the time-evolution of the scalar field vacuum expectation value.
 
+The clumping parameter $\xi$ quantifies how strongly information density responds to local matter concentrations. For $\xi = 0$, information density would be perfectly uniform across the universe, reflecting only the global average matter density. For $\xi > 0$, regions of high matter density develop enhanced information density, creating an additional attractive potential well. This effect is phenomenologically similar to self-interacting dark matter models, producing nearly isothermal density cores in galaxy halos rather than the cuspy density profiles predicted by collisionless cold dark matter simulations.
 
-\[
-\rho_I(a, \mathbf{x}) = \frac{k_B T_{\text{CMB}}(a)}{\lambda_{\text{UIDT}}^3 \ln 2} 
-\left(1 + \xi \frac{\rho_m(\mathbf{x})}{\rho_{c0}}\right) 
-\left(\frac{L_{\text{IR}}(a)}{\lambda_{\text{UIDT}}}\right)^{(2+\Delta)\delta} 
-e^{-\alpha |\nabla S_{\text{B-T}}|^2} \cdot S_{\text{scalar}}(a).
-\]
+The $S_8$ parameter combines the matter density parameter $\Omega_m$ and the amplitude of matter fluctuations $\sigma_8$ on eight-megaparsec scales:
+\begin{equation}
+\label{eq:s8_definition}
+S_8 = \sigma_8 \sqrt{\Omega_m/0.3}.
+\end{equation}
 
+Cosmic microwave background measurements from Planck predict $S_8 = 0.834 \pm 0.016$ within the $\Lambda$CDM framework \citep{Planck2020}. In contrast, weak gravitational lensing surveys including KiDS, DES, and HSC consistently measure lower values around $S_8 = 0.76$--0.78 \citep{Heymans2021,DES2021,Hikage2019}, representing a $2.5$--$3\sigma$ tension that persists across multiple independent analyses.
 
+UIDT resolves this tension through the thermodynamic damping term $\exp(-\alpha|\nabla S|^2)$ in Equation~(\ref{eq:info_density}). This exponential factor suppresses structure growth on small scales when information field gradients become large. Physically, this reflects a thermodynamic ``pressure'' resisting the formation of overly concentrated structures. The parameter $\alpha$ sets the scale at which damping becomes important, effectively providing a mechanism analogous to warm dark matter or self-interacting dark matter without introducing new particle physics.
 
-Here \(T_{\text{CMB}}(a) = T_0 (1+z)\) is the cosmic microwave background temperature as a function of scale factor, 
-\(\lambda_{\text{UIDT}} = 0.66\,\text{nm}\) is the fundamental information scale discussed in Section~2, 
-\(\rho_m(\mathbf{x})\) is the local matter density, 
-\(\rho_{c0} = 3H_0^2/(8\pi G)\) is the critical density today, 
-\(L_{\text{IR}}(a)\) is the infrared cutoff scale (approximately the Hubble radius), 
-and \(S_{\text{scalar}}(a)\) encodes the time-evolution of the scalar field vacuum expectation value.
-
-The clumping parameter \(\xi\) quantifies how strongly the information density responds to local matter concentrations. 
-For \(\xi = 0\), the information density would be perfectly uniform across the universe, 
-reflecting only the global average matter density. 
-For \(\xi > 0\), regions of high matter density also develop enhanced information density, 
-creating an additional attractive potential well. 
-This effect is similar phenomenologically to self-interacting dark matter models, 
-where dark matter particles scatter elastically, producing nearly isothermal density cores in galaxy halos 
-rather than the cuspy density profiles predicted by collisionless cold dark matter.
-
-The parameter \(\xi\) can be constrained by observations of large-scale structure, 
-particularly through weak gravitational lensing measurements that probe the matter distribution on scales of tens of megaparsecs. 
-The \(S_8\) parameter is a specific combination of the matter density parameter \(\Omega_m\) 
-and the amplitude of matter fluctuations \(\sigma_8\) on eight-megaparsec scales, defined as:
-
-
-\[
-S_8 = \sigma_8 \sqrt{\Omega_m / 0.3}.
-\]
-
-
-
-Cosmic microwave background measurements from Planck predict 
-\(S_8 = 0.834 \pm 0.016\) within the \(\Lambda\)CDM framework \citep{Planck2020}. 
-In contrast, weak lensing surveys including KiDS, DES, and HSC consistently measure 
-lower values around \(S_8 = 0.76\)–0.78 \citep{Heymans2021,DES2021,HSC2019}, 
-representing a 2.5–3\(\sigma\) tension.
-
-UIDT resolves this tension through the thermodynamic damping term 
-\(e^{-\alpha |\nabla S|^2}\) in the information density equation. 
-This exponential factor suppresses the growth of structure on small scales 
-when the gradients in the information field become large. 
-Physically, this reflects a kind of thermodynamic ``pressure'' that resists 
-the formation of overly concentrated structures. 
-The parameter \(\alpha\) sets the scale at which this damping becomes important.
-
-By fitting to the combined dataset from Euclid Quick Release 1 dwarf galaxy observations 
-\citep{Euclid2025}, DESI baryon acoustic oscillations \citep{DESI2025}, 
-and Atacama Cosmology Telescope weak lensing measurements \citep{Naess2025}, 
-we determine:
-
-
-
-\[
+By fitting to combined datasets from Euclid Q1 dwarf galaxy observations, DESI DR2 baryon acoustic oscillations, and Atacama Cosmology Telescope weak lensing measurements, we determine:
+\begin{equation}
+\label{eq:xi_value}
 \xi = 0.445 \pm 0.010.
-\]
-
+\end{equation}
 
 With this value, UIDT predicts:
-
-
-\[
+\begin{equation}
+\label{eq:s8_prediction}
 S_8 = 0.756 \pm 0.002,
-\]
-
-
-in excellent agreement with weak lensing observations and representing only a 0.3\(\sigma\) discrepancy from the Planck prediction. 
-This effectively resolves the \(S_8\) tension. 
-The very small uncertainty reflects the fact that \(S_8\) is predominantly determined by the value of \(\xi\), 
-which is tightly constrained by the dwarf galaxy observations from Euclid.
-
-\subsection{Dwarf Galaxy Morphology and the Euclid Q1 Dataset}
-
-The Euclid Quick Release 1 (Q1) data, published in November 2025, provides a unique window into the 
-small-scale behavior of dark matter through observations of dwarf galaxies \citep{Euclid2025}. 
-Dwarf galaxies are the smallest self-bound stellar systems, typically containing between one million and one billion stars, 
-compared to the Milky Way's approximately two hundred billion stars. 
-Their low stellar masses make them highly sensitive to dark matter properties because dark matter dominates their gravitational potentials.
-
-The Euclid Q1 deep field observations covered 63.1 square degrees in the northern sky, with exquisite imaging in both visible (VIS) 
-and near-infrared (NISP) wavelengths. The survey achieved photometric sensitivity sufficient to detect dwarf galaxies out to redshifts 
-\(z \sim 0.8\), corresponding to lookback times of approximately seven billion years. 
-In the Perseus galaxy cluster region alone, Euclid identified 1,100 candidate dwarf galaxies, more than doubling the previously known population. 
-Extending across all deep fields, the total catalog contains 2,674 dwarf galaxy candidates.
-
-The morphological distribution of these dwarfs is particularly revealing. Approximately 58\% are classified as dwarf ellipticals (dE), 
-characterized by smooth, featureless light profiles with little ongoing star formation. 
-The remaining 42\% are dwarf irregulars (dIrr), which show clumpy, asymmetric morphologies and active star formation. 
-The preponderance of ellipticals is surprising from the perspective of cold dark matter theory, 
-which predicts that small halos should be continuously accreting gas and forming stars, favoring irregular morphologies.
-
-In the UIDT interpretation, the high fraction of ellipticals arises from the thermodynamic damping mechanism. 
-When a dwarf galaxy halo forms, the information density field in its vicinity develops a local maximum. 
-The gradient term \(|\nabla S|\) becomes large, activating the exponential damping factor in the information density equation. 
-This damping effectively adds a pressure-like term to the gravitational dynamics, resisting further infall of gas. 
-As a result, gas infall shuts off early in the galaxy's history, exhausting the fuel supply for star formation and leaving behind a quiescent elliptical morphology.
-
-The UIDT predicts a specific relationship between the clumping parameter \(\xi\) and the elliptical fraction \(f_{\text{dE}}\). 
-For \(\xi = 0.445\), we predict:
-
-
-\[
-f_{\text{dE}} = 0.58 \pm 0.03,
-\]
-
-
-which matches the Euclid observations exactly. 
-This represents an independent validation of the \(\xi\) parameter derived from large-scale structure measurements, 
-demonstrating internal consistency of the theory across vastly different scales.
-
-Additionally, Euclid observations reveal that 53\% of dwarf ellipticals contain a luminous central nucleus, 
-and 26\% are associated with rich globular cluster systems. 
-Both features are difficult to explain in standard cold dark matter models because cuspy halo profiles tend to disrupt fragile structures. 
-In UIDT, the thermodynamic pressure creates a cored density profile, alleviating these difficulties and allowing nuclei and globular clusters to survive.
-
-\subsection{Dark Glueballs: Predicted Particles and Detection Prospects}
-
-While the thermodynamic clumping mechanism accounts for dark matter phenomena on galactic scales, 
-UIDT also predicts the existence of specific particle states that could constitute dark matter on microscopic scales. 
-These states, termed “dark glueballs,” are bound states of the information density field analogous to ordinary glueballs in QCD 
-but stabilized by topological rather than confinement mechanisms.
-
-From the Yang–Mills sector of UIDT, we predict a spectrum of glueball states with masses determined by the mass gap \(\Delta\) 
-and the scaling factor \(\gamma\). The lightest dark glueball should have mass:
-
-
-\[
-m_{\text{DG}} = \frac{\gamma \Delta}{c^2} = 16.339 \times 1.710 \,\text{GeV}/c^2 \approx 27.9 \,\text{GeV}/c^2.
-\]
-
-
-
-This mass is higher than typical WIMP candidates in the 10–1000 GeV range that have been extensively searched for in direct detection experiments 
-such as XENON, LUX-ZEPLIN, and PandaX \citep{Aprile2018,LZ2022,PandaX2022}. 
-The interaction cross-section of dark glueballs with ordinary matter is suppressed by the factor 
-\((\gamma \ell_{\text{Pl}} / \ell_{\text{weak}})^2 \sim 10^{-48}\,\text{cm}^2\), 
-far below current experimental sensitivity. This explains why decades of direct detection searches have not yet found dark matter particles.
-
-However, dark glueballs should produce observable signals in high-energy cosmic rays. 
-When ultra-high-energy cosmic ray protons with energies exceeding \(10^{19}\,\text{eV}\) collide with dark glueballs in the galactic halo, 
-they can scatter inelastically, losing energy through production of information field excitations. 
-This would appear as a subtle deficit in the cosmic ray flux at the highest energies. 
-The Pierre Auger Observatory has observed a suppression of the flux above \(10^{19}\,\text{eV}\), 
-typically attributed to the GZK cutoff \citep{Auger2021}. 
-A detailed analysis is needed to determine whether UIDT interactions contribute to this suppression.
-
-Furthermore, dark glueballs should decay via gravitational interactions with a lifetime:
-
-
-\[
-\tau_{\text{DG}} \sim \frac{M_{\text{Pl}}^2}{m_{\text{DG}}^3} \sim 10^{26}\,\text{seconds}.
-\]
-
-
-This is vastly longer than the age of the universe (\(\sim 10^{18}\,\text{seconds}\)), 
-so dark glueballs are effectively stable on cosmological timescales. 
-However, their decay products could contribute to the diffuse gamma-ray background observed by the Fermi Large Area Telescope \citep{Fermi2015} 
-or to anomalies in the cosmic ray positron fraction measured by AMS-02 \citep{AMS2019}. 
-Detailed calculations of these signatures are in progress.
+\end{equation}
+in excellent agreement with weak lensing observations while representing only a $0.3\sigma$ discrepancy from the Planck prediction. The remarkably small theoretical uncertainty reflects the tight constraint on $\xi$ provided by the dwarf galaxy morphology observations from Euclid, discussed in the following subsection.
