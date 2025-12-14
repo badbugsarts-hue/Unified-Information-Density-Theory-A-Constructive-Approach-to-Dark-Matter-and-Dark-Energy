@@ -24,6 +24,15 @@
 \newcommand{\Tr}{\mathrm{Tr}}
 \newcommand{\Lag}{\mathcal{L}}
 \newcommand{\ddt}{\mathrm{d}/\mathrm{d}t}
+% --- Cleveref shims for package-free compilation ---
+\makeatletter
+\providecommand{\cref}[1]{\ref{#1}}
+\providecommand{\Cref}[1]{\ref{#1}}
+\providecommand{\crefname}[3]{}
+\providecommand{\Crefname}[3]{}
+\providecommand{\namecref}[1]{\ref{#1}}
+\providecommand{\lcnamecref}[1]{\ref{#1}}
+\makeatother
 
 
 
