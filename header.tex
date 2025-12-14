@@ -1,1 +1,123 @@
-\newcommand{\msun}{\,\mathrm{M}_\odot} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ========================================================================= %%
+%%  UNIFIED INFORMATION-DENSITY THEORY (UIDT) v3.6 - MASTER PREAMBLE         %%
+%%  Target: Authorea (Web) + AAS Journals (PDF) | Status: PRODUCTION         %%
+%%  Author: Philipp Rietz | DOI: 10.5281/zenodo.17898290 | Date: Dec 2025    %%
+%% ========================================================================= %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% --- [1] THE PLATFORM SWITCH (CRITICAL FOR AUTHOREA) --------------------- %%
+%% LaTeXML (Web) crashes with complex layouts. PDF needs full power.
+%% This logic splits the universe in two: simple for web, pro for print.
+\ifdefined\latexml
+    % === WEB VIEW (Authorea HTML) ===
+    % Single column, larger text, simplified rendering for speed
+    \documentclass[manuscript, 12pt]{aastex631}
+    
+    % Web-compatibility Macros (LaTeXML sometimes misses these)
+    \newcommand{\arcsec}{''}
+    \newcommand{\arcmin}{'}
+    \newcommand{\url}[1]{\texttt{#1}}
+\else
+    % === PDF EXPORT / JOURNAL SUBMISSION (AAS Standard) ===
+    % twocolumn  : Standard ApJ/Letter format
+    % linenumbers: MANDATORY for peer-review
+    % trackchanges: Shows bold text for revisions
+    % astrosymb  : Loads standard astronomy symbols
+    \documentclass[twocolumn, linenumbers, trackchanges]{aastex631}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% --- [2] MODERN PACKAGE STACK (2025 STANDARDS) --------------------------- %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A. MATH & PHYSICS FUNDAMENTALS
+\usepackage{amsmath, amssymb, amsfonts} % The Holy Trinity of Math
+\usepackage{mathtools}                  % Fixes and improvements to amsmath
+\usepackage{physics}                    % Dirac notation (\ket, \bra), derivatives (\dd)
+\usepackage{slashed}                    % Feynman slash notation (useful for QFT/Yang-Mills)
+
+%% B. UNITS & NUMBERS (The "Solid Syntax" approach)
+%% siunitx is mandatory for modern physics. It handles errors and formatting automatically.
+\usepackage[separate-uncertainty=true, multi-part-units=single]{siunitx}
+\DeclareSIUnit\parsec{pc}
+\DeclareSIUnit\year{yr}
+
+%% C. TABLES & GRAPHICS
+\usepackage{booktabs}                   % Professional tables (no vertical lines!)
+\usepackage{multirow}                   % Merging cells
+\usepackage[T1]{fontenc}                % Modern font encoding
+\usepackage{microtype}                  % Subliminal typography improvements (PDF only)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% --- [3] EXTREME SEO METADATA INJECTION ---------------------------------- %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: AASTeX loads hyperref automatically. DO NOT use \usepackage{hyperref}.
+%% We use \hypersetup to inject semantic data directly into the PDF binary.
+
+\hypersetup{
+    % >>>> IDENTIFICATION <<<<
+    pdftitle={Vacuum Information Density as the Fundamental Geometric Scalar: UIDT v3.6},
+    pdfauthor={Philipp Rietz},
+    pdfsubject={Theoretical Physics, Quantum Cosmology, Yang-Mills Theory},
+    pdfcreator={Authorea + AASTeX v6.3.1 (Ultra-Optimized)},
+    pdfproducer={UIDT Collaboration},
+    
+    % >>>> HIGH-TRAFFIC KEYWORDS (Google Scholar / ADS Optimization) <<<<
+    pdfkeywords={
+        Unified Information-Density Theory, UIDT v3.6,
+        Yang-Mills Mass Gap (1.710 GeV), Gamma-Scaling (16.339),
+        Vacuum Information Density, Dynamic Dark Energy w(z),
+        Hubble Tension Resolution, S8 Tension,
+        Casimir Anomaly (0.66nm), Refractive Vacuum,
+        He II lambda-1640 Signature, Supermassive Dark Seeds,
+        Quantum Gravity, Entropic Force, Information Geometry,
+        Philipp Rietz, DOI:10.5281/zenodo.17898290
+    },
+    
+    % >>>> UX & NAVIGATION <<<<
+    bookmarks=true,
+    bookmarksnumbered=true,
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=blue,      % Internal links (Figures/Eqs)
+    citecolor=blue,      % Citations (ADS/arXiv)
+    urlcolor=magenta,    % External URLs
+    filecolor=cyan
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% --- [4] SEMANTIC MACROS (SINGLE SOURCE OF TRUTH) ------------------------ %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define your constants ONCE. Change them here, they update everywhere.
+
+% -- UIDT Core Constants --
+\newcommand{\gammaUIDT}{\ensuremath{\gamma \approx 16.339}}         % The Scaling Factor
+\newcommand{\MassGap}{\ensuremath{\Delta \approx \SI{1.710}{\giga\electronvolt}}} % The Gap
+\newcommand{\VacInfo}{\ensuremath{\rho_{\text{info}}^{\text{vac}}}} % The Scalar Field
+
+% -- Cosmological Tensions --
+\newcommand{\HubbleTension}{\ensuremath{H_0 \approx \SI{73.0}{\kilo\meter\per\second\per\mega\parsec}}}
+\newcommand{\wDynamic}{\ensuremath{w(z) \neq -1}}
+
+% -- Methods & Instruments --
+\newcommand{\DESI}{\texttt{DESI DR2}}
+\newcommand{\Euclid}{\texttt{Euclid}}
+\newcommand{\JWST}{\texttt{JWST}}
+\newcommand{\PINN}{\texttt{PINN}} % Physics-Informed Neural Networks
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% --- [5] JOURNAL TITLE PAGE DATA ----------------------------------------- %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\received{December 08, 2025}
+\revised{December 14, 2025}
+\accepted{\today}
+\submitjournal{The Astrophysical Journal} 
+
+\shorttitle{UIDT v3.6: Vacuum Information Density}
+\shortauthors{Rietz et al.}
+
+%% ========================================================================= %%
+%% END PREAMBLE - CONTENT STARTS BELOW
+%% ========================================================================= %%
