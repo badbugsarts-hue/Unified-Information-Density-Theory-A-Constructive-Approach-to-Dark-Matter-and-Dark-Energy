@@ -4,8 +4,6 @@ b39p5col7kk.tex
 baf.tex
 9eieat7q1vc.tex
 3ihorbe0t3c.tex
-3fmt1dk3fd8.tex
-51t2nvctk6k.tex
 akrh0ftgmhc.tex
 jt03m9glqh4.tex
 fpes05i1sg8.html
