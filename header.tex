@@ -6,19 +6,6 @@
 %% ========================================================================= %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% --- [1] PLATFORM SWITCH (Authorea vs. PDF) ------------------------------ %%
-\ifdefined\latexml
-    % === WEB VIEW (Authorea HTML) ===
-    \documentclass[manuscript, 12pt]{aastex631}
-    % Minimal macros for LaTeXML compatibility
-    \newcommand{\arcsec}{''}
-    \newcommand{\arcmin}{'}
-    \newcommand{\url}[1]{\texttt{#1}}
-    \usepackage[round,sort&compress]{natbib}
-\else
-    % === PDF EXPORT / JOURNAL SUBMISSION ===
-    \documentclass[twocolumn, linenumbers, trackchanges]{aastex631}
-\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --- [2] MODERN PACKAGE STACK (2025 Standards) --------------------------- %%
