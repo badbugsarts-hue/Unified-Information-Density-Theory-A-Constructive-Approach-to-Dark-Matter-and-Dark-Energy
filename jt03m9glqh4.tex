@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% SECTION: METHODS - PINNS & BAYESIAN INFERENCE (v3.6 Updated)
+%% SECTION: METHODS - PINNS & BAYESIAN INFERENCE (v3.6 Corrected)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Methods: Physics-Informed Neural Networks and Bayesian Inference}
@@ -20,7 +20,7 @@ In our architecture, a deep feedforward neural network $\mathcal{N}(t, \mathbf{x
 \end{align}
 where $\omega_i$ are adaptive weights balancing the residuals of the Klein--Gordon, Yang--Mills, and Einstein field equations.
 
-\textbf{Implementation Details:} We utilize the \texttt{JAX} framework for hardware-accelerated automatic differentiation. The network consists of 8 hidden layers with 128 neurons each, using $\tanh$ activation to ensure $C^\infty$ smoothness. Optimization is performed via the Adam algorithm ($10^5$ iterations) followed by L-BFGS-B fine-tuning until the physics residual drops below $10^{-7}$. This approach allows us to solve the "inverse problem"---inferring the scalar field profile $S(r)$ directly from observed galactic rotation curves without assuming dark matter halos.
+\textbf{Implementation Details:} We utilize the \texttt{JAX} framework for hardware-accelerated automatic differentiation. The network consists of 8 hidden layers with 128 neurons each, using $\tanh$ activation to ensure $C^\infty$ smoothness. Optimization is performed via the Adam algorithm ($10^5$ iterations) followed by L-BFGS-B fine-tuning until the physics residual drops below $10^{-7}$. This approach allows us to solve the ``inverse problem''---inferring the scalar field profile $S(r)$ directly from observed galactic rotation curves without assuming dark matter halos.
 
 \subsection{Markov Chain Monte Carlo and Parameter Constraints}
 \label{subsec:mcmc}
@@ -28,6 +28,7 @@ where $\omega_i$ are adaptive weights balancing the residuals of the Klein--Gord
 To rigorously constrain the fundamental parameters of UIDT v3.6, we perform a global Bayesian analysis using the Affine Invariant Markov Chain Monte Carlo (MCMC) ensemble sampler \texttt{emcee} (v3.1) \citep{ForemanMackey2013}.
 
 \textbf{Parameter Space:} The analysis explores a 5-dimensional parameter space derived from the theory's first principles:
+
 \begin{itemize}
     \item \textbf{Fundamental Scale $\lambda_{\mathrm{UIDT}}$:} (Prior: Log-uniform $[0.1, 10]$ nm).
     \item \textbf{Fractal Dimension $\Delta_B$:} (Prior: Uniform $[0, 0.05]$).
@@ -37,12 +38,13 @@ To rigorously constrain the fundamental parameters of UIDT v3.6, we perform a gl
 \end{itemize}
 
 \textbf{Datasets (Late 2025):} The likelihood function $\ln \mathcal{L} \propto -\chi^2/2$ incorporates the latest observational constraints:
+
 \begin{enumerate}
     \item \textbf{DESI Year 3:} BAO measurements at $z > 0.7$ constraining $H(z)$ and $w(z)$ \citep{DESI_Y3_2025}.
     \item \textbf{Euclid ERO:} Weak lensing shear power spectrum $C_\ell^{\gamma\gamma}$ for structure growth $S_8$ \citep{Euclid_ERO_2024}.
     \item \textbf{JWST CCHP:} TRGB distances to 11 local hosts for $H_0$ calibration \citep{Freedman2025}.
-    \item \textbf{Planck NPIPE & ACT DR6:} CMB temperature/polarization and lensing potential \citep{Planck_NPIPE_2020,Naess2025}.
-    [cite_start]\item \textbf{Pantheon+:} Type Ia Supernovae magnitude-redshift relation[cite: 37].
+    \item \textbf{Planck NPIPE \& ACT DR6:} CMB temperature/polarization and lensing potential \citep{Planck_NPIPE_2020, Naess2025}.
+    \item \textbf{Pantheon+:} Type Ia Supernovae magnitude-redshift relation.
 \end{enumerate}
 
 We utilize 256 parallel walkers evolving for 20,000 steps. Convergence is verified via the integrated autocorrelation time ($\tau_{\mathrm{int}} > 50$) and the Gelman--Rubin statistic ($\hat{R} < 1.01$).
@@ -73,4 +75,4 @@ The global fit results are:
 \mathrm{UIDT}: &\quad \chi^2 = 2344, \quad \mathrm{BIC} = 2398, \quad \mathrm{AIC} = 2354.
 \end{align}
 
-The improvement $\Delta \mathrm{BIC} = 548$ indicates "decisive" evidence against $\Lambda$CDM according to Jeffreys' scale. This massive gain stems primarily from UIDT's ability to simultaneously fit the DESI $w(z)$ evolution and the $H_0$ tension with fewer parameters, whereas $\Lambda$CDM incurs heavy penalties for the $H_0$ and $S_8$ mismatches.
+The improvement $\Delta \mathrm{BIC} = 548$ indicates ``decisive'' evidence against $\Lambda$CDM according to Jeffreys' scale. This massive gain stems primarily from UIDT's ability to simultaneously fit the DESI $w(z)$ evolution and the $H_0$ tension with fewer parameters, whereas $\Lambda$CDM incurs heavy penalties for the $H_0$ and $S_8$ mismatches.
